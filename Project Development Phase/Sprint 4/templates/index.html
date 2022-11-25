@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Donor Application</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <!--bootstrap files starts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--bootstrap code ends-->
+   <style>
+    
+            
+    .custom-toggler.navbar-toggler {
+      
+              border:transparent;
+              
+          }
+         
+        
+            
+          .custom-toggler .navbar-toggler-icon {
+              background-image: ("img.png");
+             
+          }
+          .navbar-nav {
+              margin-left: auto;
+          }
+          .nav-item{
+            text-decoration: none;
+            color:#070909;
+            
+            
+          }
+          .nav-item:hover{
+            text-decoration: none;
+           
+            color:black;
+            
+          }
+          .nav-item:visited{
+            text-decoration: none;
+           
+          
+          }
+  </style>
+
+      <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "b5e67d39-9862-4f40-9dc5-020482814f3a", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "c084d960-061d-4eb3-bad3-3745a05f6c2a", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+
+  </script>
+</head>
+<body>
+<!--navbar section starts-->
+<div class="m-0" style=" background-color: rgba(226, 211, 139, 0.4);">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand" style="margin-left:50px;">
+                <img src={{url_for('static',filename="/images/logo.png")}} width="100" height="80" alt="plasma">
+                
+            </a>
+            <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"></button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav" style="font-weight: 400;">
+                    <a href="{{url_for('hello_world')}}" class="nav-item nav-link active" style="font-size: 20px;">Home</a>
+                    <a href="{{url_for('login')}}" class="nav-item nav-link" style="font-size: 20px;">Register</a>
+                   
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--navbar section ends-->
+
+<!--What is plasma donation section starts-->
+
+<div class="what_is_plasma_donation_section" >
+    <div class="what_is_plasma_donation">
+        <h3 style="text-align: center; font-weight: 800;">Plasma Donor Application</h3>
+        <button class="button-30"><a href="{{url_for('login')}}">Donate Plasma through our application</a></button>
+        <img align ="right" src={{url_for('static',filename="/images/pic.png")}} alt="picture">
+    </div>
+</div>
+<!--What is plasma donation section ends-->
+<!--why there is a need of plasma section starts-->
+
+<div class="what_is_plasma_donation_section" style=" background-color: rgba(156, 139, 53, 0.4);">
+    <div class="what_is_plasma_donation">
+        <h2 style="text-align: center;font-weight: 600;">Instructions for plasma donors</h2>
+         
+            <p style="text-align: center; font-weight:500">Plasma donors should be at least 18 years old</p>
+            <p style="text-align: center; font-weight:500">Drink plenty of water before and after donating</p>
+            <p style="text-align: center; font-weight:500">Avoid alcohol for at least four hours after your donation</p>
+            <p style="text-align: center; font-weight:500"> Plasma donors should weigh at least 50 kilograms</p>
+    </div>
+</div>
+
+<!--why there is a need of plasma section ends-->
+
+
+
+</body>
+</html>
